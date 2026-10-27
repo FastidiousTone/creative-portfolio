@@ -1,0 +1,109 @@
+.navbar {
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	border-bottom: 1px solid var(--divider);
+}
+
+.nav-links {
+	display: flex;
+	/* justify-content: center; <-- This isn’t needed for this arrangement. */
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	gap: 32px;
+}
+
+.nav-link {
+	display: inline-flex;
+	align-items: center;
+
+	min-height: var(--target-min-height);
+	/* Your links use .btn, which already supplies inline-flex, but declaring it here makes navigation styling self-contained. The minimum height ensures desktop links also have a 44px target. */
+
+	text-decoration: none;
+	font-size: var(--text-sm);
+	line-height: 1.5;
+	font-weight: var(--weight-semibold);
+	color: inherit;
+	/* .nav-link now handles its own minimum height on every viewport. */
+}
+
+/* 
+Your existing .nav-links > .logo[...] matches nothing in your HTML: the logo sits outside .nav-links.
+
+.nav-links > .logo[aria-current='page'] {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+} */
+
+/* Your rules serve two purposes:
+- [aria-current='page']: persistent underline identifying the current page.
+- :hover: temporary underline when the pointer is over a link. */
+
+.nav-link[aria-current='page'] {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+.nav-link:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	font-size: var(--text-sm);
+	font-weight: var(--weight-bold);
+	color: inherit;
+	text-decoration: none;
+	min-height: var(--target-min-height);
+}
+
+.menu-toggle {
+	display: none;
+}
+
+@media (width < 600px) {
+	.navbar {
+		padding-top: var(--space-8px);
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.nav-links {
+		display: none;
+		order: 1;
+	}
+
+	.nav-links.active {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		gap: var(--space-8px);
+		padding-block: var(--space-16px);
+	}
+
+	/* Remove the entire mobile .nav-link rule, since those declarations apply at every width.
+
+	.nav-link {
+		display: inline-flex;
+		align-items: center;
+		min-height: var(--target-min-height);
+} */
+
+	.menu-toggle {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--text-sm);
+		font-weight: var(--weight-semibold);
+		min-height: var(--target-min-height);
+		font-family: inherit;
+		color: inherit;
+		border: none;
+		background-color: transparent;
+	}
+}

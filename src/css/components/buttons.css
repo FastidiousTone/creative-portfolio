@@ -1,0 +1,40 @@
+.btn {
+	all: unset;
+	/* all: unset; || Resets every CSS property on this element back to its “natural” (unset) state. | This removes: default button borders, padding, background, font inheritance quirks, default browser styles (especially for <button> and <a>) | This is the “nuclear reset” so you can style the button from scratch. */
+
+	outline: revert;
+	/* Since all: unset removes focus outlines, outline: revert puts back the browser’s default focus outline. | This preserves accessibility while letting you still customize other parts. */
+
+	box-sizing: border-box;
+	display: inline-flex;
+	cursor: pointer;
+	font-size: var(--text-sm);
+	line-height: 1.2;
+	font-weight: var(--weight-semibold);
+	align-items: center;
+	justify-content: center;
+	transition:
+		background-color 180ms,
+		translate 180ms;
+}
+
+.btn--pill {
+	min-height: 48px;
+	/* Using min-height instead of height keeps the 48px target while allowing the control to grow if text needs more room. */
+
+	background-color: var(--ink);
+	color: var(--canvas);
+	padding: 10px 20px;
+	border-radius: var(--radius-button);
+	box-shadow: 2px 2px 2px var(--box-shadow);
+}
+
+.btn--pill:hover {
+	background-color: var(--primary-btn-hover-bg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.btn:active {
+		translate: 1px 1px;
+	}
+}

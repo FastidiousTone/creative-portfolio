@@ -1,0 +1,21 @@
+.cta {
+	background-color: var(--accent);
+	color: var(--on-accent);
+	padding: var(--space-24px);
+	border-radius: var(--radius-cta);
+	margin-bottom: var(--space-48px);
+	box-shadow: 2px 2px 2px var(--box-shadow);
+}
+
+.cta > .eyebrow-text {
+	color: var(--on-accent);
+	margin-bottom: var(--space-16px);
+}
+
+.cta-title {
+	font-size: var(--text-cta-title);
+	font-weight: var(--weight-semibold);
+	line-height: 1.2;
+	color: var(--on-accent);
+	margin-bottom: var(--space-24px);
+}

@@ -1,0 +1,56 @@
+/* Include padding and borders in an element's total size */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: var(--canvas);
+	color: var(--ink);
+}
+
+/* Remember to add this and apply it to the html tag. Place below html{} property. */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+/* Remove the browser's default page margin */
+body {
+	margin: 0;
+	font-family: var(--font-rubik);
+	font-size: var(--text-xl);
+	line-height: 1.5;
+}
+
+/* Remove default spacing so components can define their own */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+/* Keep images within their containers */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Make form controls use the surrounding typography */
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+ul {
+	padding: 0;
+}

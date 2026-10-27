@@ -1,0 +1,38 @@
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--space-24px);
+}
+
+.project-card {
+	width: 100%;
+}
+
+img {
+	border-radius: var(--radius-artwork);
+	box-shadow: 2px 2px 2px var(--box-shadow);
+}
+
+.project-card > a {
+	display: block;
+	text-decoration: none;
+}
+
+a:hover > .project-card-title {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+.project-card > a:focus-visible {
+	/* Padding adds space inside the link; outline-offset moves the focus outline away from its edge. Your existing focus outline stays intact. */
+
+	outline-offset: 3px;
+}
+
+@media (width < 600px) {
+	.project-grid {
+		grid-template-columns: repeat(1, 1fr);
+		/* grid-template-rows: repeat(2, 1fr); < this isn't needed. */
+		gap: var(--space-32px);
+	}
+}

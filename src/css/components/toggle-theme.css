@@ -1,0 +1,35 @@
+.theme-toggle {
+	display: inline-flex;
+	min-width: var(--target-min-height);
+	min-height: var(--target-min-height);
+	background-color: transparent;
+	border: none;
+	color: var(--ink);
+	cursor: pointer;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+}
+
+/* Light theme: show the moon, hide the sun. */
+.theme-icon--moon {
+	display: block;
+}
+
+.theme-icon--sun {
+	display: none;
+}
+
+:root[data-theme='dark'] .theme-icon--moon {
+	display: none;
+}
+
+:root[data-theme='dark'] .theme-icon--sun {
+	display: block;
+}
+
+@media (width >= 600px) {
+	.navbar {
+		column-gap: var(--space-24px);
+	}
+}

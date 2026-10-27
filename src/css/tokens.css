@@ -1,0 +1,166 @@
+:root {
+	--canvas: #f6f3eb;
+	--box-shadow: #dfdedb;
+	--ink: #202820;
+	--muted: #62695f;
+	--accent: #d9f279;
+	--border: #adb5a4;
+	--divider: #d5d8cc;
+	--error: #a62d24;
+	--input-surface: #ffffff;
+	--primary-btn-hover-bg: #373a37;
+	--on-accent: #202820;
+
+	/* Artwork Colors */
+
+	--artwork-color1: #c8c1eb;
+	--artwork-color2: #e9a777;
+	--artwork-color3: #b6cdba;
+
+	/* Colors (theme-dependant) | These colors will later change depending on the theme. */
+
+	/* Font-Family */
+
+	--font-manrope: 'Manrope', sans-serif;
+	--font-dm-sans: 'DM Sans', sans-serif;
+	--font-space-grotesk: 'Space Grotesk', sans-serif;
+	--font-oswald: 'Oswald', sans-serif;
+	--font-rubik: 'Rubik', sans-serif;
+	--font-arimo: 'Arimo', sans-serif;
+
+	/* Typography sizes */
+	--text-xs: 0.75rem; /* 12px */
+	--text-meta: 0.8125rem; /* 13px */
+	--text-sm: 0.875rem; /* 14px */
+	--text-input: 1rem; /* 16px */
+	--text-base: 1.125rem; /* 18px */
+	--text-lg: 1.375rem; /* 22px */
+	--text-xl: 1.5rem; /* 24px */
+	--text-2xl: 2rem; /* 32px */
+	--text-3xl: 2.5rem; /* 40px */
+	--text-4xl: 2.75rem; /* 44px */
+	--text-5xl: 3rem; /* 48px */
+	--text-6xl: 4rem; /* 64px */
+	--text-7xl: 5.5rem; /* 88px */
+
+	/* Typography roles */
+	--text-logo: var(--text-base);
+	--text-eyebrow: var(--text-xs);
+	--text-navigation: var(--text-sm);
+	--text-button: var(--text-sm);
+	--text-body: var(--text-base);
+	--text-card-title: var(--text-lg);
+	--text-card-meta: var(--text-meta);
+	--text-service-name: var(--text-xl);
+	--text-service-number: var(--text-sm);
+	--text-footer: var(--text-xs);
+
+	/* Responsive heading roles — desktop defaults */
+	--text-display: var(--text-7xl);
+	--text-section-title: var(--text-5xl);
+	--text-cta-title: var(--text-3xl);
+
+	/* Font weights */
+	--weight-regular: 400;
+	--weight-semibold: 600;
+	--weight-bold: 700;
+
+	/* Line heights */
+	--leading-tight: 1.2;
+	--leading-heading: 1.3;
+	--leading-eyebrow: 1.4;
+	--leading-body: 1.5;
+	--leading-display: 1.5;
+
+	/* Shared spacing scale — use for margin, padding, and gap */
+	--space-8px: 0.5rem; /* 8px */
+	--space-16px: 1rem; /* 16px */
+	--space-24px: 1.5rem; /* 24px */
+	--space-32px: 2rem; /* 32px */
+	--space-40px: 2.5rem; /* 40px */
+	--space-44px: 2.75rem; /* 44px */
+	--space-48px: 3rem; /* 48px */
+	--space-64px: 4rem; /* 64px */
+	--space-80px: 5rem; /* 80px */
+	--space-96px: 6rem; /* 96px */
+
+	/* Container */
+	--container-max: 90rem; /* 1440px, including side padding */
+	--page-gutter: var(--space-96px);
+	--description-max: 60ch;
+
+	/* Responsive spacing — desktop defaults */
+	--intro-padding-top: var(--space-48px);
+	--intro-title-spacing: var(--space-80px);
+	--intro-description-spacing: var(--space-32px);
+	--featured-artwork-spacing: var(--space-48px);
+	--project-grid-gap: var(--space-24px);
+
+	/* Shared component spacing */
+	--section-spacing: var(--space-48px);
+	--card-title-spacing: var(--space-16px);
+	--card-meta-spacing: var(--space-8px);
+	--service-row-padding: var(--space-24px);
+	--service-row-gap: var(--space-16px);
+	--cta-padding: var(--space-24px);
+	--button-padding-inline: 1.25rem; /* 20px */
+	--button-padding-block: 0.625rem; /* 10px */
+
+	/* Corners */
+	--radius-input: 0.5rem; /* 8px */
+	--radius-artwork: 1rem; /* 16px */
+	--radius-cta: 1.25rem; /* 20px */
+	--radius-button: 1.5rem; /* 24px */
+	--radius-pill: 9999px;
+
+	/* Controls */
+	--target-min-height: 2.75rem; /* 44px */
+	--button-min-height: 3rem; /* 48px */
+	--input-height: 3.375rem; /* 54px */
+	--message-min-height: 10rem; /* 160px */
+
+	/* Borders and focus */
+	--border-width: 1px;
+	--focus-width: 3px;
+	--focus-offset: 3px;
+}
+
+/* Tablet — also applies below 600px unless overridden below */
+@media (width < 1024px) {
+	:root {
+		--page-gutter: var(--space-48px);
+
+		--text-display: var(--text-6xl);
+		--text-section-title: var(--text-3xl);
+		--text-cta-title: var(--text-2xl);
+
+		--intro-title-spacing: var(--space-48px);
+	}
+}
+
+:root[data-theme='dark'] {
+	/* Dark-theme color overrides go here. */
+	--canvas: #202820;
+	--ink: #f6f3eb;
+	--muted: #b8bfb2;
+	--primary-btn-hover-bg: #d5dccd;
+	--box-shadow: rgb(0 0 0 / 40%);
+}
+
+/* Mobile */
+@media (width < 600px) {
+	:root {
+		--page-gutter: var(--space-24px);
+
+		--text-display: var(--text-4xl);
+		--text-section-title: var(--text-2xl);
+		--text-cta-title: var(--text-xl);
+
+		--intro-padding-top: var(--space-32px);
+		--intro-title-spacing: var(--space-32px);
+		--intro-description-spacing: var(--space-24px);
+
+		--featured-artwork-spacing: var(--space-32px);
+		--project-grid-gap: var(--space-32px);
+	}
+}

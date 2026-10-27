@@ -1,0 +1,119 @@
+.project-meta {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0;
+	gap: var(--space-24px);
+}
+
+.project-meta dt {
+	font-size: var(--text-xs);
+	font-weight: var(--weight-semibold);
+	color: var(--muted);
+	line-height: 1.5;
+	padding-bottom: var(--space-8px);
+}
+
+.project-meta dd {
+	margin: 0;
+	font-size: var(--text-input);
+	font-weight: var(--weight-regular);
+	color: var(--ink);
+	line-height: 1.5;
+}
+
+.project-title {
+	font-size: var(--text-display);
+	font-weight: var(--weight-regular);
+	line-height: var(--leading-display);
+	margin-bottom: var(--space-32px);
+}
+
+.breadcrumbs {
+	padding-top: var(--space-32px);
+	margin-bottom: var(--space-24px);
+	font-size: var(--text-sm);
+	line-height: 1.5;
+	color: var(--muted);
+}
+
+.breadcrumbs > a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.breadcrumbs > a:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+/* 
+Your current .breadcrumbs:hover > a underlines Work when you hover anywhere in the breadcrumb navigation. Moving :hover onto the anchor limits the trigger to the Work link itself. 
+
+.breadcrumbs:hover > a {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+*/
+
+.project-intro {
+	margin-bottom: var(--space-48px);
+}
+
+.project-hero {
+	margin-bottom: var(--space-48px);
+}
+
+.project-hero > img {
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius-artwork);
+}
+
+.project-challenge {
+	margin-bottom: var(--space-48px);
+}
+
+.project-description {
+	font-size: var(--text-base);
+	font-weight: var(--weight-regular);
+	line-height: 1.5;
+	max-width: 65ch;
+	color: var(--muted);
+}
+
+.project-approach {
+	margin-bottom: var(--space-48px);
+}
+
+.project-section-title {
+	font-size: var(--text-section-title);
+	font-weight: var(--weight-regular);
+	line-height: 1.2;
+	color: var(--ink);
+	margin-bottom: var(--space-24px);
+}
+
+.project-support {
+	margin-bottom: var(--space-48px);
+}
+
+.project-support > img {
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius-artwork);
+}
+
+.project-outcome {
+	margin-bottom: var(--space-48px);
+}
+
+.project-next {
+	/* utilizing margin instead of padding so that it follows the order of other wrapper's spacing patterns. */
+	margin-bottom: var(--space-24px);
+}
+
+@media (width < 600px) {
+	.project-meta {
+		grid-template-columns: 1fr;
+	}
+}

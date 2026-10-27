@@ -1,0 +1,78 @@
+.contact-email {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--target-min-height);
+	font-size: var(--text-base);
+	font-weight: var(--weight-semibold);
+	color: var(--ink);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+.contact-form {
+	display: grid;
+	gap: var(--space-24px);
+	max-width: 720px;
+	margin-bottom: var(--space-48px);
+}
+
+.contact-form > button {
+	justify-self: start;
+}
+
+.form-field {
+	display: grid;
+	gap: var(--space-8px);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+	width: 100%;
+	font-size: var(--text-input);
+	color: var(--ink);
+	background-color: var(--input-surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-input);
+	padding: var(--space-16px);
+}
+
+.form-field input,
+.form-field select {
+	min-height: 54px;
+}
+
+.form-field textarea {
+	min-height: 160px;
+	resize: vertical;
+}
+
+.form-field label {
+	font-size: var(--text-sm);
+	font-weight: var(--weight-semibold);
+	line-height: 1.5;
+	color: var(--ink);
+}
+
+.form-note {
+	font-size: var(--text-sm);
+	font-weight: var(--weight-regular);
+	line-height: 1.5;
+	color: var(--muted);
+}
+
+.field-error {
+	font-size: var(--text-sm);
+	font-weight: var(--weight-regular);
+	line-height: 1.5;
+	color: var(--error);
+}
+
+/* 
+.form-field,
+input,
+select,
+textarea
+
+selects the .form-field wrapper and every input, select, and textarea on the site. That gives the wrapper its own white background, border, and padding too.
+*/
