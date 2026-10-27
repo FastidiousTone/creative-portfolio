@@ -1,5 +1,7 @@
 # AR / Studio — Creative Portfolio
 
+[View live site](https://ar-studio-antoine.netlify.app/)
+
 A responsive, five-page website for a fictional creative studio, built by Antoine Randle with HTML, CSS, JavaScript, and Vite.
 
 This learning project explores translating a design brief into reusable components, responsive layouts, and accessible interactions without a JavaScript framework.
